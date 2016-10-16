@@ -987,7 +987,7 @@ function __($msgid)
                         <h2><a target="_blank" href="http://open-classifieds.com/"><img class="logo" src="http://open-classifieds.com/wp-content/uploads/2015/05/oc-logo-hd.png"></a></h2>
                         <br>
                         <p><strong><?=__("Welcome to the super easy and fast installation")?></strong></p>
-                        <p>Open Classifieds is an open source powerful PHP classifieds script that can help you start a website and turn it into a fully customizable classifieds site within a few minutes.</p>
+                        <p><?=__("Open Classifieds is an open source powerful PHP classifieds script that can help you start a website and turn it into a fully customizable classifieds site within a few minutes.")?></p>
                         <br>
                         <p class="text-center"><strong><?=__('Can’t get it to work?')?></strong></p>
                         <p><a target="_blank" href="http://open-classifieds.com/market/" class="btn btn-default btn-large btn-block"><?=__("Get our professional services")?></a></p>
@@ -1144,7 +1144,7 @@ function __($msgid)
                                                             <a class="btn btn-default btn-block" href="<?=core::request('SITE_URL', install::get_url())?>"><?=__('Go to Your Website')?></a>
                                                         </p>
                                                         <p>
-                                                            <a class="btn btn-default btn-block" href="<?=core::request('SITE_URL', install::get_url())?>oc-panel/">Admin</a>
+                                                            <a class="btn btn-default btn-block" href="<?=core::request('SITE_URL', install::get_url())?>oc-panel/"><?=__('Panel')?></a>
                                                         </p>
                                                     </div>
                                                 </div>

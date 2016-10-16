@@ -100,7 +100,7 @@ else
                         <h2><a target="_blank" href="http://open-classifieds.com/"><img class="logo" src="http://open-classifieds.com/wp-content/uploads/2015/05/oc-logo-hd.png"></a></h2>
                         <br>
                         <p><strong><?=__("Welcome to the super easy and fast installation")?></strong></p>
-                        <p>Open Classifieds is an open source powerful PHP classifieds script that can help you start a website and turn it into a fully customizable classifieds site within a few minutes.</p>
+                        <p><?=__("Open Classifieds is an open source powerful PHP classifieds script that can help you start a website and turn it into a fully customizable classifieds site within a few minutes.")?></p>
                         <br>
                         <p class="text-center"><strong><?=__('Can’t get it to work?')?></strong></p>
                         <p><a target="_blank" href="http://open-classifieds.com/market/" class="btn btn-default btn-large btn-block"><?=__("Get our professional services")?></a></p>
@@ -160,12 +160,12 @@ else
                                             </div>
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="SAMPLE_DB" <?=(core::request('DB_CREATE'))?NULL:'checked'?>> <?=__("Sample data")?>
+                                                    <input type="checkbox" name="DB_CREATE" <?=(core::request('DB_CREATE'))?'checked':NULL?>> <?=__("Create DB")?>
                                                 </label>
                                             </div>
-                                            <div class="checkbox hidden animated db-adv">
+                                            <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" name="DB_CREATE" <?=(core::request('DB_CREATE'))?'checked':NULL?>> <?=__("Create DB")?>
+                                                    <input type="checkbox" name="SAMPLE_DB" <?=(core::request('SAMPLE_DB'))?'checked':NULL?>> <?=__("Sample data")?>
                                                 </label>
                                             </div>
                                             <div class="form-group hidden animated db-adv">
@@ -234,18 +234,18 @@ else
                                                             <p class="form-control-static text-warning"><small><?=__('Please now erase the folder');?> <code>/install/</code></small></p>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">user</label>
+                                                            <label class="control-label"><?=__('Administrator email')?></label>
                                                             <p class="form-control-static admin_email"></p>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label">pass</label>
+                                                            <label class="control-label"><?=__('Admin Password')?></label>
                                                             <p class="form-control-static admin_pwd"></p>
                                                         </div>
                                                         <p>
                                                             <a class="btn btn-default btn-block" href="<?=core::request('SITE_URL', install::$url)?>"><?=__('Go to Your Website')?></a>
                                                         </p>
                                                         <p>
-                                                            <a class="btn btn-default btn-block" href="<?=core::request('SITE_URL', install::$url)?>oc-panel/">Admin</a>
+                                                            <a class="btn btn-default btn-block" href="<?=core::request('SITE_URL', install::$url)?>oc-panel/"><?=__('Panel')?></a>
                                                         </p>
                                                     </div>
                                                 </div>
