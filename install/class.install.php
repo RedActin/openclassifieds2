@@ -384,23 +384,13 @@ class install{
             {
                 //they selected to create the DB
                 if (core::request('DB_CREATE'))
-                {
-                    $dbcheck = @mysqli_query($link,"CREATE DATABASE IF NOT EXISTS `".core::request('DB_NAME')."` CHARACTER SET `".core::request('DB_CHARSET')."` COLLATE utf8_general_ci");
+                    @mysqli_query($link,"CREATE DATABASE IF NOT EXISTS `".core::request('DB_NAME')."`");
 
-                    if (!$dbcheck)
-                    {
-                        $error_msg.= __('Create DB').': ' . mysqli_error($link);
-                        $install = FALSE;
-                    }
-                    else
-                    {
-                        $dbcheck = @mysqli_select_db($link,core::request('DB_NAME'));
-                        if (!$dbcheck)
-                        {
-                            $error_msg.= __('Database name').': ' . mysqli_error($link);
-                            $install = FALSE;
-                        }
-                    }
+                $dbcheck = @mysqli_select_db($link,core::request('DB_NAME'));
+                if (!$dbcheck)
+                {
+                    $error_msg.= __('Database name').': ' . mysqli_error($link);
+                    $install = FALSE;
                 }
             }
             else 

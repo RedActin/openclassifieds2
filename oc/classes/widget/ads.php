@@ -38,7 +38,7 @@ class Widget_Ads extends Widget
 						 		'ads_title'  => array(	'type'		=> 'text',
 						 		  						'display'	=> 'text',
 						 		  						'label'		=> __('Ads title displayed'),
-						 		  						'default'   => __('Latest Ads'),
+						 		  						'default'   => 'Latest Ads',
 														'required'	=> FALSE),
 						 		);
 	}

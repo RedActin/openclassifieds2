@@ -96,7 +96,7 @@
                         </div>
                                         
                         <div class="form-group">
-                            <a class="btn btn-success" href="http://j.mp/elasticemailoc" target="_blank" onclick='setCookie("elastic_alert",1,365)' ><?=__('Sign Up ElasticEmail 150K emails free per month')?></a>
+                            <a class="btn btn-success" href="http://j.mp/elasticemailoc" target="_blank" onclick='setCookie("elastic_alert",1,365)' >Sign Up ElasticEmail 150K emails free per month</a>
                         </div>
 
                         <div class="form-group">
@@ -160,7 +160,7 @@
                         </div>
 
                         <div class="form-group">
-                            <?=FORM::label($forms['smtp_port']['key'], __('Smtp port'), array('class'=>'control-label', 'for'=>$forms['smtp_port']['key']))?>
+                            <?=FORM::label($forms['smtp_port']['key'], __('Smtp port'), array('class'=>'control-label col-sm-4', 'for'=>$forms['smtp_port']['key']))?>
                             <?=FORM::input($forms['smtp_port']['key'], $forms['smtp_port']['value'], array(
                                 'placeholder' => "", 
                                 'class' => 'tips form-control', 
